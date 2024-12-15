@@ -22,6 +22,7 @@ article_template = PromptTemplate(
 )
 
 llm = OpenAI(temperature=0.9)
+
 title_chain = LLMChain(llm=llm, prompt=title_template,verbose=True)
 
 llm2 = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.9)
